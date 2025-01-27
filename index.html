@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen M - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body {
+            display: flex; justify-content: center; align-items: center;
+            height: 100vh; background: #121212; color: white;
+            overflow: hidden; position: relative;
+        }
+        .container {
+            text-align: center; z-index: 2;
+        }
+        .profile-img {
+            width: 300px; height: 300px; border-radius: 50%;
+            object-fit: cover; margin-bottom: 20px;
+            border: 5px solid white;
+        }
+        h1 { font-size: 3rem; }
+        p { font-size: 1.4rem; margin: 10px 0; max-width: 700px; }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: white; font-size: 1.8rem; margin: 0 15px;
+            transition: 0.3s;
+        }
+        .social-links a:hover { color: #ff4081; }
+        .resume-btn {
+            margin-top: 20px; padding: 12px 25px;
+            font-size: 1.3rem; border: none; border-radius: 8px;
+            background: #ff4081; color: white; cursor: pointer;
+            text-decoration: none; display: inline-block;
+            transition: 0.3s;
+        }
+        .resume-btn:hover { background: #ff79b0; }
+
+        /* Background Animation */
+        .animation {
+            position: absolute; width: 100%; height: 100%;
+            overflow: hidden; z-index: 1;
+            background: radial-gradient(circle, rgba(36,36,36,1) 0%, rgba(18,18,18,1) 100%);
+        }
+        .animation span {
+            position: absolute; width: 3px; height: 3px; background: rgba(255, 255, 255, 0.8);
+            animation: twinkle 3s infinite alternate ease-in-out;
+            border-radius: 50%;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.3; transform: scale(0.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="animation"></div>
+    <div class="container">
+        <img src="assets/praveen.webp" alt="Praveen M" class="profile-img">
+        <h1>Praveen M</h1>
+        <p>Cybersecurity Enthusiast | Full-Stack Developer | Cloud Computing</p>
+        <div class="social-links">
+            <a href="www.linkedin.com/in/praveenm1910" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Praveenm1910" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/_.praveen._1910/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="https://www.credly.com/users/praveen-m.3c1c21ec" target="_blank"><i class="fas fa-certificate"></i></a> -->
+            <a href="mailto:praveenm191004@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+        <!-- <a href="Praveen_M.pdf" class="resume-btn" target="_blank">View Resume</a> -->
+    </div>
+    
+    <script>
+        // Create starry background animation
+        const animationContainer = document.querySelector('.animation');
+        for(let i = 0; i < 100; i++) {
+            let span = document.createElement('span');
+            let size = Math.random() * 3 + 1;
+            let positionX = Math.random() * 100;
+            let positionY = Math.random() * 100;
+            let duration = Math.random() * 5 + 3;
+            span.style.width = `${size}px`;
+            span.style.height = `${size}px`;
+            span.style.left = `${positionX}%`;
+            span.style.top = `${positionY}%`;
+            span.style.animationDuration = `${duration}s`;
+            animationContainer.appendChild(span);
+        }
+    </script>
+</body>
+</html>
