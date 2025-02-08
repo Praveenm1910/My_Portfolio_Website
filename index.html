@@ -1,94 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praveen M - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body {
-            display: flex; justify-content: center; align-items: center;
-            height: 100vh; background: #121212; color: white;
-            overflow: hidden; position: relative;
-        }
-        .container {
-            text-align: center; z-index: 2;
-        }
-        .profile-img {
-            width: 300px; height: 300px; border-radius: 50%;
-            object-fit: cover; margin-bottom: 20px;
-            border: 5px solid white;
-        }
-        h1 { font-size: 3rem; }
-        p { font-size: 1.4rem; margin: 10px 0; max-width: 700px; }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            color: white; font-size: 1.8rem; margin: 0 15px;
-            transition: 0.3s;
-        }
-        .social-links a:hover { color: #ff4081; }
-        .resume-btn {
-            margin-top: 20px; padding: 12px 25px;
-            font-size: 1.3rem; border: none; border-radius: 8px;
-            background: #ff4081; color: white; cursor: pointer;
-            text-decoration: none; display: inline-block;
-            transition: 0.3s;
-        }
-        .resume-btn:hover { background: #ff79b0; }
 
-        /* Background Animation */
-        .animation {
-            position: absolute; width: 100%; height: 100%;
-            overflow: hidden; z-index: 1;
-            background: radial-gradient(circle, rgba(36,36,36,1) 0%, rgba(18,18,18,1) 100%);
-        }
-        .animation span {
-            position: absolute; width: 3px; height: 3px; background: rgba(255, 255, 255, 0.8);
-            animation: twinkle 3s infinite alternate ease-in-out;
-            border-radius: 50%;
-        }
-        @keyframes twinkle {
-            0% { opacity: 0.3; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.2); }
-            100% { opacity: 0.3; transform: scale(0.8); }
-        }
-    </style>
+<head>
+	<title>Praveen M</title>
+	<meta name="viewport" content="initial-scale=1" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="asset/ab2.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link
+		href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&family=Rubik:100,200,300,400,500,600,700,800,900&display=swap"
+		rel="stylesheet">
+	<script src="asset/particle.js"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/cursor.css">
 </head>
-<body>
-    <div class="animation"></div>
-    <div class="container">
-        <img src="assets/praveen.webp" alt="Praveen M" class="profile-img">
-        <h1>Praveen M</h1>
-        <p>Cybersecurity Enthusiast | Full-Stack Developer | Cloud Computing</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/praveenm1910/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Praveenm1910" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/_.praveen._1910/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <!-- <a href="https://www.credly.com/users/praveen-m.3c1c21ec" target="_blank"><i class="fas fa-certificate"></i></a> -->
-            <a href="mailto:praveenm191004@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-        </div>
-        <!-- <a href="Praveen_M.pdf" class="resume-btn" target="_blank">View Resume</a> -->
-    </div>
-    
-    <script>
-        // Create starry background animation
-        const animationContainer = document.querySelector('.animation');
-        for(let i = 0; i < 100; i++) {
-            let span = document.createElement('span');
-            let size = Math.random() * 3 + 1;
-            let positionX = Math.random() * 100;
-            let positionY = Math.random() * 100;
-            let duration = Math.random() * 5 + 3;
-            span.style.width = `${size}px`;
-            span.style.height = `${size}px`;
-            span.style.left = `${positionX}%`;
-            span.style.top = `${positionY}%`;
-            span.style.animationDuration = `${duration}s`;
-            animationContainer.appendChild(span);
-        }
-    </script>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	<div id="all">
+		<!--mouse  follower-->
+		<div class="cursor"></div>
+		<div class="cursor-ring"></div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target"
+			id="ftco-navbar">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"><span>P</span>raveen M</a>
+				<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+					data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="oi oi-menu"></span> Menu
+				</button>
+				<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav nav ml-auto">
+						<li class="nav-item"><a href="#home" class="nav-link"><span>Home</span></a></li>
+						<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+						<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+						<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="hero-wrap js-fullheight" id="home">
+			<!-- Container for particles animation -->
+			<div id="particles-js"></div>
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+					<div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
+						<div class="text text-center">
+							<span class="subheading">HELLO! I am</span>
+							<h1 style="font-family: Poppins;font-size: 54px;">Praveen M</h1>
+							<h2>I'm a <span class="txt-rotate" data-period="2000"
+									data-rotate='["Developer.", "Cyber Security Researcher.", "Tech Enthusiasist."]'></span>
+							</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mouse">
+				<div class="outer-ring"></div>
+				<div class="inner-ring"></div>
+				<div class="mouse-wheel">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</section>
+		<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+			<div class="container">
+				<div class="row d-flex no-gutters">
+					<div class="col-md-6 col-lg-6 d-flex">
+						
+					</div>
+					<div class="col-md-6 col-lg-6 pl-md-5 py-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								<p>Passionate cybersecurity enthusiast, Developer. Dedicated to securing digital landscapes, building innovative solutions, and staying ahead in the ever-evolving tech world. Always eager to learn, contribute, and push the boundaries of technology.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Name:</span> <span>Praveen M</span></li>
+									<li class="d-flex"><span>Date of birth:</span> <span>October 19, 2004</span></li>
+									<li class="d-flex"><span>Address:</span> <span>Chennai, India</span></li>
+									<li class="d-flex"><span>Zip code:</span> <span>600106</span></li>
+									<li class="d-flex"><span>Email:</span>
+										<span>praveenm191004@gmail.com</span>
+									</li>
+									<li class="d-flex"><span>Phone: </span> <span>+91 8148108373</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><br><br>
+		<!-- <section class="stats-section">
+			<div class="container-fluid px-md-3">
+				<div class="row d-flex align-items-center text-center">
+					
+					<div class="col-4">
+						<div class="counter-box">
+							<div class="icon"><i class="fas fa-calendar-check"></i></div>
+							<strong class="number" data-number="10">0</strong>
+							<p>Successful Events</p>
+						</div>
+					</div>
+					
+					<div class="col-4">
+						<div class="counter-box">
+							<div class="icon"><i class="fas fa-code"></i></div>
+							<strong class="number" data-number="5">0</strong>
+							<p>Projects Completed</p>
+						</div>
+					</div>
+		
+					<div class="col-4">
+						<div class="counter-box">
+							<div class="icon"><i class="fas fa-smile"></i></div>
+							<strong class="number" data-number="3">0</strong>
+							<p>Happy Clients</p>
+						</div>
+					</div>
+		
+				</div>
+			</div>
+		</section> -->
+		<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<nav id="navi">
+							<ul>
+								<li><a href="#page-1">Education</a></li>
+								<li><a href="#page-2">Volunteering</a></li>
+								<li><a href="#page-3">Projects</a></li>
+								<li><a href="#page-6">Skills</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-9">
+						<div id="page-1" class="page one">
+							<h2 class="heading" style="color: black;">Education</h2>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="icon d-flex align-items-center justify-content-center">
+									<span class="flaticon-ideas"></span>
+								</div>
+								<div class="text pl-3">
+									<span class="date">2020</span>
+									<h2>Grade X</h2>
+									<span class="position">Cheran Matriculation Higher Secondary School</span>
+									<p>I have passed my SSLC with 93.6% marks with good
+										communication
+										skills</p>
+								</div>
+							</div>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="icon d-flex align-items-center justify-content-center">
+									<span class="flaticon-ideas"></span>
+								</div>
+								<div class="text pl-3">
+									<span class="date">2022</span>
+									<h2>Grade XII</h2>
+									<span class="position">Cheran Matriculation Higher Secondary School</span>
+									<p>I have passed my higher secondary schooling with 89.5% marks with good
+										communication
+										skills</p>
+								</div>
+							</div>
+							<div class="resume-wrap d-flex ftco-animate">
+								<div class="icon d-flex align-items-center justify-content-center">
+									<span class="flaticon-ideas"></span>
+								</div>
+								<div class="text pl-3">
+									<span class="date">2022 - 2026</span>
+									<h2>B.Tech - Computer Science and Business Systems</h2>
+									<span class="position">Panimalar Engineering College</span>
+									<p>I'm currently pursuing my Bachelor of Technology in great way in this institution
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<div id="page-2" class="page two">
+								<h2 class="heading" style="color: black;">Volunteering</h2>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<span class="date">July 2024 - December 2024</span>
+										<h2>Organizer</h2>
+										<span class="position">PEC Hacks 2.0</span>
+										<p>As part of the organizing team for PEC Hacks 2.0, I played a pivotal role in planning and managing the event, ensuring a seamless experience for participants. I contributed by developing the official hackathon website and writing scripts to automate key processes, streamlining operations and enhancing efficiency. This experience allowed me to combine technical expertise with event management, fostering a platform for innovation and collaboration.</p>
+									</div>
+								</div>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<span class="date">October 2024 - Present</span>
+										<h2>GDG Core Team Member</h2>
+										<span class="position">Google Developer Groups on Campus Panimalar Engineering College</span>
+										<p>As a core team member of GDG Panimalar Engineering College, I drove innovation by organizing cutting-edge workshops, hackathons, and tech events. By collaborating with industry leaders and mentoring peers, I fostered a thriving developer community, empowering students to explore and excel in AI, Cloud Computing, Cybersecurity, and beyond.</p>
+									</div>
+								</div>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<span class="date">January 2025 - Present</span>
+										<h2>Volunteer</h2>
+										<span class="position">DEF CON Chennai Group</span>
+										<p>Contributing to the development and enhancement of the official website, collaborating with cybersecurity professionals and enthusiasts to create an engaging and informative online presence, while gaining hands-on experience in web development, security, and community-driven initiatives.</p>
+									</div>
+								</div>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<span class="date">July 2024 - Present</span>
+										<h2>Github Student Developer</h2>
+										<!-- <span class="position">Github</span> -->
+										<p>As a GitHub Student Developer, I leverage GitHub’s powerful tools and resources to enhance my skills in software development, open-source contributions, and collaborative coding. Through the GitHub Student Developer Pack, I explore new technologies, build innovative projects</p>
+									</div>
+								</div>
+							</div>
+							<div id="page-3" class="page three">
+								<h2 class="heading" style="color: black;">Projects</h2>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<span class="date">2024</span>
+										<h2>• ARP Spoof Detection Tool</h2>
+										<span class="position">Cyber Security</span>
+										<p>Developed an prototype model to detect ARP Spoofing in a network and alert the User about
+											the Network Spoof.
+											<br></p>
+										<p style="color: black;"><b>Github : </b><a
+												href="https://github.com/Praveenm1910/ARP-Spoof-Detector.git">Tap
+												Here</a></p>
+									</div>
+								</div>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<span class="date">2024</span>
+										<h2>Password Strength Checker</h2>
+										<span class="position">Tool</span>
+										<p>The Password Strength Checker is a vital tool designed to evaluate and bolster the security of user-created passwords. By assessing passwords through a range of security criteria, this project empowers users to craft robust passwords that protect against unauthorized access and potential security threats.<br></p>
+										<p style="color: black;"><b>Github : </b><a href="https://github.com/Praveenm1910/passwordstrengthchecker.git">Tap Here</a></p>
+									</div>
+								</div>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<span class="date">2024</span>
+										<h2>Chat Server</h2>
+										<span class="position">Tool</span>
+										<p>The Multi-threaded Group Chat Server is a real-time chat application built in Python, enabling multiple users to communicate seamlessly in a single chat room. It leverages socket programming and threading to handle multiple connections efficiently.<br>
+										</p>
+										<p style="color: black;"><b>Github : </b><a
+												href="https://github.com/Praveenm1910/Multi-Thread-Chat-Server.git">Tap
+												Here</a></p>
+									</div>
+								</div>
+								
+								<div id="page-6" class="page five">
+									<h2 class="heading" style="color: black;">Skills</h2>
+									<div class="row">
+										<div class="col-md-6 mb-4">
+											<div class="progress-wrap">
+												<h4>HTML/CSS/JS</h4>
+												<div class="progress-bar">
+													<div class="progress-fill color-1" style="width: 80%;"></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6 mb-4">
+											<div class="progress-wrap">
+												<h4>Git & GitHub</h4>
+												<div class="progress-bar">
+													<div class="progress-fill color-2" style="width: 95%;"></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6 mb-4">
+											<div class="progress-wrap">
+												<h4>MySQL</h4>
+												<div class="progress-bar">
+													<div class="progress-fill color-3" style="width: 70%;"></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6 mb-4">
+											<div class="progress-wrap">
+												<h4>Python</h4>
+												<div class="progress-bar">
+													<div class="progress-fill color-4" style="width: 80%;"></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6 mb-4">
+											<div class="progress-wrap">
+												<h4>Java</h4>
+												<div class="progress-bar">
+													<div class="progress-fill color-5" style="width: 70%;"></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6 mb-4">
+											<div class="progress-wrap">
+												<h4>C</h4>
+												<div class="progress-bar">
+													<div class="progress-fill color-6" style="width: 60%;"></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 mb-4">
+											<div class="progress-wrap">
+												<h4>PHP</h4>
+												<div class="progress-bar">
+													<div class="progress-fill color-6" style="width: 50%;"></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 mb-4">
+											<div class="progress-wrap">
+												<h4>Networking Fundamentals</h4>
+												<div class="progress-bar">
+													<div class="progress-fill color-6" style="width: 70%;"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>		
+		<footer class="ftco-footer ftco-section">
+			<div id="particles-js"></div> <!-- Particle container -->
+			<div class="container">
+				<div class="row mb-4">
+					<div class="col-md">
+						<div class="ftco-footer-widget mb-4">
+							<ul class="ftco-footer-social list-unstyled mt-4">
+								<li><a href="https://github.com/Praveenm1910"><span
+											class="icon-github"></span></a>
+								</li>
+								<li><a href="https://www.linkedin.com/in/praveenm1910"><span
+											class="icon-linkedin"></span></a></li>
+								<li><a href="https://www.instagram.com/_.praveen._1910"><span
+											class="icon-instagram"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p>&copy;
+							<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed
+							and Maintained by Praveen M
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div id="ftco-loader" class="show fullscreen">
+			<svg class="circular" width="48px" height="48px">
+				<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#3e64ff" />
+				<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+					stroke="#FFFFFF" />
+			</svg>
+		</div>
+	</div>
+	<script src="asset/script.js"></script>
+	<script src="asset/cursor.js"></script>
 </body>
+
 </html>
