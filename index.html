@@ -1,214 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praveen M - Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0a192f; /* Dark blue background */
-      color: #ccd6f6; /* Light text color */
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Home Section */
-    .home {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .home::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(100, 255, 218, 0.1) 10%, transparent 10.01%);
-      background-size: 20px 20px;
-      animation: moveBackground 10s linear infinite;
-      z-index: -1;
-    }
-
-    @keyframes moveBackground {
-      0% {
-        transform: translate(0, 0);
-      }
-      100% {
-        transform: translate(-50%, -50%);
-      }
-    }
-
-    .home-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .home h1 {
-      font-size: 4.5rem;
-      font-weight: 700;
-      color: #ccd6f6;
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
-    }
-
-    .home h1::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: #64ffda; /* Teal underline */
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.5s ease;
-    }
-
-    .home h1:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
-    .home h2 {
-      font-size: 2rem;
-      font-weight: 500;
-      color: #8892b0;
-      margin-top: 10px;
-      position: relative;
-    }
-
-    .home h2 span {
-      color: #64ffda; /* Teal for dynamic text */
-      font-weight: 600;
-      display: inline-block;
-      opacity: 0;
-      transform: scale(0.5);
-      animation: popIn 1s forwards;
-    }
-
-    @keyframes popIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.2);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen M</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- SEO Meta Tags -->
+    <title>Praveen M - Developer & Cybersecurity Enthusiast | Portfolio</title>
+    <meta name="description" content="Praveen M is a passionate developer and cybersecurity enthusiast from Chennai, India. Specialized in web development and digital security solutions.">
+    <meta name="keywords" content="Praveen M, developer, cybersecurity, tech enthusiast, Chennai, web development, portfolio">
+    <meta name="author" content="Praveen M">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Praveen M - Developer & Cybersecurity Enthusiast">
+    <meta property="og:description" content="Passionate developer and cybersecurity enthusiast dedicated to securing digital landscapes and building innovative solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-your-profile-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Praveen M - Developer & Cybersecurity Enthusiast">
+    <meta name="twitter:description" content="Passionate developer and cybersecurity enthusiast dedicated to securing digital landscapes and building innovative solutions.">
+    <meta name="twitter:image" content="https://yourwebsite.com/path-to-your-profile-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Praveen M",
+      "url": "https://yourwebsite.com",
+      "sameAs": [
+        "https://github.com/yourusername",
+        "https://linkedin.com/in/yourusername",
+        "https://twitter.com/yourusername"
+      ],
+      "jobTitle": "Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Self-Employed"
+      },
+      "description": "Passionate developer and cybersecurity enthusiast dedicated to securing digital landscapes and building innovative solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "India",
+        "postalCode": "600106"
       }
     }
-
-    .home p {
-      font-size: 1.2rem;
-      color: #8892b0;
-      margin-top: 20px;
-    }
-
-    .home .social-links {
-      margin-top: 30px;
-    }
-
-    .home .social-links a {
-      margin: 0 15px;
-      font-size: 1.5rem;
-      color: #64ffda;
-      transition: color 0.3s ease;
-    }
-
-    .home .social-links a:hover {
-      color: #ccd6f6;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .home h1 {
-        font-size: 3rem;
-      }
-
-      .home h2 {
-        font-size: 1.5rem;
-      }
-
-      .home p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+    </script>
 </head>
 <body>
-  <!-- Home Section -->
-  <section class="home">
-    <div class="home-content">
-      <h1>Praveen M</h1>
-      <h2>I'm a <span class="typing"></span></h2>
-      <p>Passionate about cybersecurity, development, and innovation. Let's build a secure digital future together.</p>
-      <div class="social-links">
-        <a href="https://github.com/Praveenm1910"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/praveenm1910"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/_.praveen._1910"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </section>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
 
-  <!-- Scripts -->
-  <script>
-    // Typing Effect with Unique Animation
-    const typingText = document.querySelector('.typing');
-    const phrases = ["Developer.", "Cybersecurity Enthusiast.", "Tech Enthusiast."];
-    let phraseIndex = 0;
-    let letterIndex = 0;
-    let isDeleting = false;
+            <nav class="navbar">
+            <div class="nav-content">
+                <a href="#home"class="nav-item active">Home</a>
+                <a href="#about"class="nav-item">About</a>
+                <a href="#education"class="nav-item">Education</a>
+                <a href="#skills"class="nav-item">Skills</a>
+                <a href="#experience"class="nav-item">Experience</a>
+                <a href="#projects"class="nav-item">Projects</a>
+                <a href="#certifications"class="nav-item">Certifications</a>
+                <a href="#contact"class="nav-item">Contact</a>
+            </div>
+        </nav>
 
-    const type = () => {
-      const currentPhrase = phrases[phraseIndex];
-      if (!isDeleting) {
-        typingText.textContent = currentPhrase.slice(0, letterIndex + 1);
-        letterIndex++;
-        if (letterIndex === currentPhrase.length) {
-          isDeleting = true;
-          setTimeout(type, 1000); // Pause at the end of the phrase
-        } else {
-          setTimeout(type, 100); // Typing speed
-        }
-      } else {
-        typingText.textContent = currentPhrase.slice(0, letterIndex - 1);
-        letterIndex--;
-        if (letterIndex === 0) {
-          isDeleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length; // Move to the next phrase
-        }
-        setTimeout(type, 50); // Deleting speed
-      }
-    };
 
-    type();
-  </script>
+    <main>
+        <section id="home" class="hero section">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Praveen M</span></h1>
+                <p class="subtitle">I'm a <span class="typed-text"></span><span >&nbsp;</span></p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-primary">Get In Touch</a>
+                    <a href="#projects" class="cta-secondary">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p class="bio">Passionate cybersecurity enthusiast, Developer. Dedicated to securing digital landscapes, building innovative solutions, and staying ahead in the ever-evolving tech world. Always eager to learn, contribute, and push the boundaries of technology.</p>
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 19, 2004</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chennai, India - 600106</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>praveenm191004@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8148108373</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="Praveen.JPG" alt="Praveen M">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <div class="education-date">2022 - Present</div>
+                    <h3 class="education-title">B. Tech Computer Science and Business Systems</h3>
+                    <div class="education-company">Panimalar Engineering College</div>
+                    <p>Description of your role and responsibilities. Highlight key achievements and projects.</p>
+                </div>
+                <div class="education-item">
+                    <div class="education-date">2022</div>
+                    <h3 class="education-title">Grade XII</h3>
+                    <div class="education-company">Cheran Matriculation Higher Secondary School</div>
+                    <p>Description of your role and responsibilities. Highlight key achievements and projects.</p>
+                </div>
+                <div class="education-item">
+                    <div class="education-date">2020</div>
+                    <h3 class="education-title">Grade X</h3>
+                    <div class="education-company">Cheran Matriculation Higher Secondary School</div>
+                    <p>Description of your role and responsibilities. Highlight key achievements and projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>FrameWork</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Node</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Svelte</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Windows</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Linux</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">GCP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cyber Security</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Tools Building</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Network Security</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 55%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Socket programming</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience section">
+            <h2>Positions</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Organizer</h3>
+                        <h4>PEC Hacks 2.0</h4>
+                        <p class="date">2024 - Present</p>
+                        <p>Led development team in creating innovative web solutions. Implemented modern technologies and best practices.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Core Team Member</h3>
+                        <h4>Google Developer Groups</h4>
+                        <p class="date">2024 - present</p>
+                        <p>Developed and maintained multiple client websites. Collaborated with design team to implement responsive designs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Core Team Member</h3>
+                        <h4>DEF CON Chennai Group</h4>
+                        <p class="date">2024 - present</p>
+                        <p>Developed and maintained multiple client websites. Collaborated with design team to implement responsive designs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>PEC Hacks 2.0 Website</h3>
+                        <p>Collaborated in building a website for PEC Hacks
+                            2.0, a fast-paced 36-hour hackathon.</p>
+                        <div class="project-links">
+                            <a href="www.pechacks.org" class="project-link">View Live</a>
+                            <!-- <a href="#" class="project-link">Source Code</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>ARP Spoof Detection Tool</h3>
+                        <p>Developed an prototype model to detect ARP Spoofing in a network and alert the User about the Network Spoof.</p>
+                        <div class="project-links">
+                            <!-- <a href="#" class="project-link">View Live</a> -->
+                            <a href="#" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Password Strength Checker</h3>
+                        <p>The Password Strength Checker is a vital tool designed to evaluate and bolster the security of user-created passwords. By assessing passwords through a range of security criteria, this project empowers users to craft robust passwords that protect against unauthorized access and potential security threats.</p>
+                        <div class="project-links">
+                            <!-- <a href="#" class="project-link">View Live</a> -->
+                            <a href="#" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Chat Server</h3>
+                        <p>The Multi-threaded Group Chat Server is a real-time chat application built in Python, enabling multiple users to communicate seamlessly in a single chat room. It leverages socket programming and threading to handle multiple connections efficiently.</p>
+                        <div class="project-links">
+                            <!-- <a href="#" class="project-link">View Live</a> -->
+                            <a href="#" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+        <section id="certifications" class="certifications section">
+            <h2>Certifications</h2>
+            <div class="cert-container">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>TCS - ion Information Security Practioners Perspective</h3>
+                    <p>TCS</p>
+                    <p class="cert-date">2023</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>GitHub Foundations</h3>
+                    <p>GitHub</p>
+                    <p class="cert-date">2024</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>AWS Cloud Essentials</h3>
+                    <p>AWS</p>
+                    <p class="cert-date">2024</p>
+                </div>
+                <!-- Add more certification cards as needed -->
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/Praveenm1910"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Praveen M. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
