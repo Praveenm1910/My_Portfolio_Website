@@ -154,3 +154,33 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 
+//form responses
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+    const responseMessage = document.getElementById('response-message');
+
+    try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbyOj66l1ylObfisbL8288mdG0gKan7yeYOgGY9WppWB38qv47EIUPAUBA8XBsT4J9iOTw/exec', {
+            method: 'POST',
+            body: new URLSearchParams(formData)
+        });
+
+        const result = await response.json();
+
+        responseMessage.textContent = result.message;
+        responseMessage.style.display = 'block';
+        responseMessage.style.color = result.status === 'success' ? 'green' : 'red';
+
+        if (result.status === 'success') {
+            form.reset();
+        }
+
+    } catch (error) {
+        responseMessage.textContent = 'An error occurred. Please try again later.';
+        responseMessage.style.display = 'block';
+        responseMessage.style.color = 'red';
+    }
+});
