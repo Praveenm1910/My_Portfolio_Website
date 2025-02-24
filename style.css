@@ -4,7 +4,7 @@
     --secondary-color: #000000;
     --text-color: #ffffff;
     --bg-color: #0a0a0a;
-    --accent-color: #f3d3d3;
+    --accent-color: #e8e1e1;
     --transition: all 0.3s ease;
 }
 
@@ -169,7 +169,7 @@ body::before {
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
 }
 
 .hero-content {
@@ -234,7 +234,6 @@ h2 {
 
 /* About Section */
 #about {
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 0px;
     overflow: hidden;
     transition: var(--transition);
@@ -311,7 +310,7 @@ h2 {
 
 /* education Section */
 #education {
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
     /* border-radius: 10px; */
     overflow: hidden;
     transition: var(--transition);

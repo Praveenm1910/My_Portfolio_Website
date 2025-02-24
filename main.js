@@ -72,7 +72,7 @@ function type() {
         charIndex++;
     }
 
-    let typeSpeed = isDeleting ? 50 : 100;
+    let typeSpeed = isDeleting ? 40 : 80;
 
     if (!isDeleting && charIndex === currentText.length) {
         isDeleting = true;
@@ -89,73 +89,7 @@ function type() {
 type();
 
 // Enhanced Particles Animation
-class Particle {
-    constructor() {
-        this.x = Math.random() * window.innerWidth;
-        this.y = window.innerHeight + 100;
-        this.size = Math.random() * 3 + 1;
-        this.speedY = Math.random() * 2 + 1;
-        this.speedX = (Math.random() - 0.5) * 1;
-        this.opacity = Math.random();
-    }
 
-    update() {
-        this.y -= this.speedY;
-        this.x += this.speedX;
-        if (this.opacity < 1) this.opacity += 0.01;
-    }
-
-    draw(ctx) {
-        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
-
-function setupParticles() {
-    const particles = document.querySelector('.particles');
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    particles.appendChild(canvas);
-
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    const particlesList = [];
-    const particleCount = 50;
-
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Add new particles
-        while (particlesList.length < particleCount) {
-            particlesList.push(new Particle());
-        }
-
-        // Update and draw particles
-        for (let i = particlesList.length - 1; i >= 0; i--) {
-            particlesList[i].update();
-            particlesList[i].draw(ctx);
-
-            // Remove particles that are off screen
-            if (particlesList[i].y < -100) {
-                particlesList.splice(i, 1);
-            }
-        }
-
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-}
-
-setupParticles();
 
 // Active Section Highlight
 const sectionTop = section.offsetTop - document.querySelector('.navbar').offsetHeight - 150;
