@@ -156,11 +156,28 @@ const observer = new IntersectionObserver((entries) => {
 
 // Form Handling
 const contactForm = document.getElementById('contact-form');
+const googleScriptURL = 'https://script.google.com/macros/s/AKfycbxf3zdYigLQH4w_YMID7v-l3jMl7SnvNqlYhpF8qkkcJymIH1aiuwNnMK1u83MQilNBpA/exec';
+
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Add your form submission logic here
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        };
+
+        fetch(googleScriptURL, {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        })
+        .catch(error => console.error('Error:', error));
     });
 }
