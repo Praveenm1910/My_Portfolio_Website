@@ -1418,7 +1418,7 @@ body {
 
 @media (max-width: 480px) {
     :root {
-        --nav-width: 50px;
+        /* --nav-width: 50px; */
         --section-padding: 5rem 1rem 2rem;
     }
 
