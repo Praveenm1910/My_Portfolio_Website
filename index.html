@@ -1,443 +1,622 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praveen M</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <!-- SEO Meta Tags -->
-    <title>Praveen M - Developer & Cybersecurity Enthusiast | Portfolio</title>
-    <meta name="description" content="Praveen M is a passionate developer and cybersecurity enthusiast from Chennai, India. Specialized in web development and digital security solutions.">
-    <meta name="keywords" content="Praveen M, developer, cybersecurity, tech enthusiast, Chennai, web development, portfolio">
+    <title>Praveen M</title>
+    <meta name="description"
+        content="Portfolio of a skilled developer, cyber security analyst, and programmer. Showcasing projects, skills, and experience in web development and cybersecurity.">
+    <meta name="keywords"
+        content="developer, programmer, cyber security analyst, web development, frontend, backend, portfolio">
     <meta name="author" content="Praveen M">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Praveen M - Developer & Cybersecurity Enthusiast">
-    <meta property="og:description" content="Passionate developer and cybersecurity enthusiast dedicated to securing digital landscapes and building innovative solutions.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Praveen M - Developer Portfolio">
+    <meta property="og:description" content="Portfolio of a skilled developer, cyber security analyst, and programmer.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta property="og:image" content="https://yourwebsite.com/path-to-your-profile-image.jpg">
-    
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:url" content="https://praveenm.xyz">
+    <meta property="og:image" content="https://praveenm.xyz/assets/profile.jpg">
+
+    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Praveen M - Developer & Cybersecurity Enthusiast">
-    <meta name="twitter:description" content="Passionate developer and cybersecurity enthusiast dedicated to securing digital landscapes and building innovative solutions.">
-    <meta name="twitter:image" content="https://yourwebsite.com/path-to-your-profile-image.jpg">
-    
+    <meta name="twitter:title" content="Praveen M - Developer Portfolio">
+    <meta name="twitter:description"
+        content="Portfolio of a skilled developer, cyber security analyst, and programmer.">
+    <meta name="twitter:image" content="https://praveenm.xyz/assets/profile.jpg">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://yourwebsite.com">
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Praveen M",
-      "url": "https://praveenm.xyz.com",
+      "jobTitle": ["Developer", "Cyber Security Analyst", "Programmer"],
+      "url": "https://praveenm.xyz",
       "sameAs": [
         "https://github.com/Praveenm1910",
-        "https://www.linkedin.com/in/praveenm1910/",
-        "https://www.instagram.com/_.praveen._1910/"
-      ],
-      "jobTitle": "Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Self-Employed"
-      },
-      "description": "Passionate developer and cybersecurity enthusiast dedicated to securing digital landscapes and building innovative solutions.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Chennai",
-        "addressRegion": "Tamil Nadu",
-        "addressCountry": "India",
-        "postalCode": "600106"
-      }
+        "https://www.linkedin.com/in/praveenm1910",
+        "https://www.instagram.com/_.praveen._1910"
+      ]
     }
     </script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
+    <!-- Mouse Highlighter -->
+    <div class="mouse-highlighter"></div>
 
-            <nav class="navbar">
-            <div class="nav-content">
-                <a href="#home"class="nav-item active">Home</a>
-                <a href="#about"class="nav-item">About</a>
-                <a href="#education"class="nav-item">Education</a>
-                <a href="#skills"class="nav-item">Skills</a>
-                <a href="#experience"class="nav-item">Experience</a>
-                <a href="#projects"class="nav-item">Projects</a>
-                <a href="#certifications"class="nav-item">Certifications</a>
-                <a href="#contact"class="nav-item">Contact</a>
-            </div>
-            </nav>
+    <!-- Vertical Navigation -->
+    <nav class="vertical-nav">
+        <div class="nav-logo">
+            <span>PM</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#positions" class="nav-link" data-section="positions">Positions</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+    </nav>
 
-
-    <main>
-        <section id="home" class="hero section">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Praveen M</span></h1>
-                <p class="subtitle">I'm a <span class="typed-text"></span>|<span class=>&nbsp;</span></p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="cta-primary">Get In Touch</a>
-                    <a href="#projects" class="cta-secondary">View My Work</a>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <div class="particles"></div>
+            <div class="home-content">
+                <h1 class="home-title">Praveen M</h1>
+                <div class="typewriter-container">
+                    <span class="typewriter-text">I am a </span>
+                    <span class="typewriter-roles"></span>
+                    <!-- <span class="cursor">|</span> -->
+                </div>
+                <p class="home-subtitle">Passionate about creating innovative solutions and securing digital
+                    environments</p>
+                <div class="home-cta">
+                    <a href="#about" class="cta-button primary">Explore My Work</a>
+                    <a href="#contact" class="cta-button secondary">Get In Touch</a>
                 </div>
             </div>
-        </section>
-
-        <section id="about" class="about section">
-            <div class="about-container">
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p class="bio">Passionate cybersecurity enthusiast, Developer. Dedicated to securing digital landscapes, building innovative solutions, and staying ahead in the ever-evolving tech world. Always eager to learn, contribute, and push the boundaries of technology.</p>
-                    <div class="personal-info">
-                        <div class="info-item">
-                            <i class="fas fa-calendar"></i>
-                            <span>October 19, 2004</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Chennai, India - 600106</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>praveenm191004@gmail.com</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 8148108373</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-frame">
-                        <img src="Praveen.webp" alt="Praveen M">
-                    </div>
-                </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
             </div>
         </section>
 
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <div class="education-container">
-                <div class="education-item">
-                    <div class="education-date">2022 - Present</div>
-                    <h3 class="education-title">B. Tech Computer Science and Business Systems</h3>
-                    <div class="education-company">Panimalar Engineering College</div>
-                    <!-- <p>Description of your role and responsibilities. Highlight key achievements and projects.</p> -->
-                </div>
-                <div class="education-item">
-                    <div class="education-date">2022</div>
-                    <h3 class="education-title">Grade XII</h3>
-                    <div class="education-company">Cheran Matriculation Higher Secondary School</div>
-                    <!-- <p>Description of your role and responsibilities. Highlight key achievements and projects.</p> -->
-                </div>
-                <div class="education-item">
-                    <div class="education-date">2020</div>
-                    <h3 class="education-title">Grade X</h3>
-                    <div class="education-company">Cheran Matriculation Higher Secondary School</div>
-                    <!-- <p>Description of your role and responsibilities. Highlight key achievements and projects.</p> -->
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills section">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">HTML5</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="about-bg"></div>
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-info">
+                        <div class="about-text">
+                            <p>I'm a passionate developer and cyber security analyst with expertise in full-stack
+                                development and digital security. I love creating innovative solutions that make a
+                                difference in the digital world. Always eager to learn, contribute, and push the
+                                boundaries of technology.</p>
+                            <div class="personal-info">
+                                <div class="info-item">
+                                    <span class="label">Date of Birth:</span>
+                                    <span class="value">October 19, 2004</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Location:</span>
+                                    <span class="value">Chennai, India</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Email:</span>
+                                    <span class="value">praveenm191004@gmail.com</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Mobile:</span>
+                                    <span class="value">+91 81481 08373</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">CSS3</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%"></div>
-                            </div>
+                            <a href="assets/Praveen_M.pdf" class="resume-btn" target="_blank">Download Resume</a>
                         </div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">PHP</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">MySQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">C</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>FrameWork</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Node</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Svelte</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 40%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Bootstrap</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Platforms</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Windows</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Linux</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">AWS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">GCP</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 55%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Cyber Security</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Tools Building</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Network Security</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 55%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Socket programming</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 55%"></div>
-                            </div>
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img src="assets/Praveen.webp" alt="Praveen M - Profile Picture" loading="lazy">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="experience section">
-            <h2>Positions</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Organizer</h3>
-                        <h4>PEC Hacks 2.0</h4>
+        <!-- Education Section -->
+        <section id="education" class="section education-section">
+            <div class="education-bg"></div>
+            <div class="section-container">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>B. Tech Computer Science and Business Systems</h3>
+                            <p class="institution">Panimalar Engineering College, Chennai</p>
+                            <p class="duration">2022 - 2026</p>
+                            <!-- <p class="description">Specialized in Software Engineering and Cybersecurity. Graduated with -->
+                            <!-- First Class Honours.</p> -->
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Higher Secondary Education (12th)</h3>
+                            <p class="institution">Cheran Matriculation Higher Secondary School, Chennai</p>
+                            <p class="duration">2022</p>
+                            <!-- <p class="description">Computer Science stream with Mathematics. Scored 95% in board
+                                examinations.</p> -->
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Secondary Education (10th)</h3>
+                            <p class="institution">Cheran Matriculation Higher Secondary School, Chennai</p>
+                            <p class="duration">2020</p>
+                            <!-- <p class="description">Completed with distinction. Scored 96% in CBSE board examinations.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="skills-bg"></div>
+            <div class="section-container">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">MariaDB</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">PHP</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Svelte</span>
+                            <span class="skill-tag">ZealPHP</span>
+                            <span class="skill-tag">Node</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Platforms</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">Windows</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Git</span>
+                            <!-- <span class="skill-tag">MongoDB</span> -->
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cyber Security</h3>
+                        <div class="skills-list">
+                            <!-- <span class="skill-tag">Penetration Testing</span> -->
+                            <span class="skill-tag">Tools Building</span>
+                            <span class="skill-tag">Network Security</span>
+                            <span class="skill-tag">OWASP</span>
+                            <span class="skill-tag">Burp Suite</span>
+                            <span class="skill-tag">Metasploit</span>
+                            <span class="skill-tag">Socket Programming</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Positions Section -->
+        <section id="positions" class="section positions-section">
+            <div class="positions-bg"></div>
+            <div class="section-container">
+                <h2 class="section-title">Leadership Positions</h2>
+                <div class="positions-grid">
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <h3>Core Team Member</h3>
+                        <h4 class="position-org">Google Developer Groups</h4>
                         <p class="date">2024 - Present</p>
-                        <p>Led development team in creating innovative web solutions. Implemented modern technologies and best practices.</p>
+                        <p class="position-desc">Leading community initiatives, organizing tech events, and mentoring
+                            developers in Google technologies and best practices.</p>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                            </svg>
+                        </div>
+                        <h3>Organizer</h3>
+                        <h4 class="position-org">PEC Hacks 2.0</h4>
+                        <p class="date">2024 - Present</p>
+                        <!-- <p class="position-org">Panimalar Engineering College</p> -->
+                        <p class="position-desc">Organized one of the largest hackathons in India, overseeing website
+                            development, automating essential scripts, and
+                            coordinating outreach with tech communities.</p>
+                    </div>
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                            </svg>
+                        </div>
                         <h3>Core Team Member</h3>
-                        <h4>Google Developer Groups</h4>
-                        <p class="date">2024 - present</p>
-                        <p>Developed and maintained multiple client websites. Collaborated with design team to implement responsive designs.</p>
+                        <h4 class="position-org">DEF CON Chennai Group</h4>
+                        <p class="date">2024 - Present</p>
+                        <!-- <p class="position-org">DefCon Security Community</p> -->
+                        <p class="position-desc">Active member of the cybersecurity community; contributed to the
+                            development and maintenance of the DEFCON Chennai
+                            website.</p>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Core Team Member</h3>
-                        <h4>DEF CON Chennai Group</h4>
-                        <p class="date">2024 - present</p>
-                        <p>Developed and maintained multiple client websites. Collaborated with design team to implement responsive designs.</p>
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                            </svg>
+                        </div>
+                        <h3>Event Manager</h3>
+                        <h4 class="position-org">TEDx Panimalar Engineering College</h4>
+                        <p class="date">2025 - Present</p>
+                        <!-- <p class="position-org">DefCon Security Community</p> -->
+                        <p class="position-desc">Successfully led the planning and execution of a TEDx Talk, overseeing
+                            team management and on-ground operations.</p>
+                    </div>
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                            </svg>
+                        </div>
+                        <h3>Co-Lead</h3>
+                        <h4 class="position-org">The Coding Society Club - Department of Computer Science and Business
+                            Systems</h4>
+                        <p class="date">2024 - Present</p>
+                        <!-- <p class="position-org">DefCon Security Community</p> -->
+                        <p class="position-desc">Organized and coordinated multiple workshops, coding contests, and
+                            technical competitions to foster programming culture
+                            and skill development among our students.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects section">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>PEC Hacks 2.0 Website</h3>
-                        <p>Collaborated in building a website for PEC Hacks
-                            2.0, a fast-paced 36-hour hackathon.</p>
-                        <div class="project-links">
-                            <a href="https://pechacks.org/" class="project-link">View Live</a>
-                            <!-- <a href="#" class="project-link">Source Code</a> -->
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="projects-bg"></div>
+            <div class="section-container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="Security Scanner Tool" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>ARP Spoof Detection Tool</h3>
+                            <p>Developed a real-time ARP spoof detector using raw packet capture to identify spoofed
+                                IP-MAC mappings.
+                                Implemented threshold-based detection with logging, IP blocking via iptables, and
+                                automated email alerts.
+                                Supports multiple interfaces and provides CLI options for lookup and version info.
+                                Helps in proactive network security and monitoring against ARP-based attacks.
+                            </p>
+                            <div class="project-tech">
+                                <span>C</span>
+                                <span>libpcap</span>
+                                <span>iptables</span>
+                                <span>mailutils</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Praveenm1910/ARP-Spoof-Detector" target="_blank"
+                                    rel="noopener">GitHub</a>
+                                <!-- <a href="https://project2-demo.com" target="_blank" rel="noopener">Live Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="E-Commerce Platform" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Multi-Threaded Secure Chat Server</h3>
+                            <p>Built a secure multithreaded chat server with user authentication, encrypted
+                                communication, and private messaging.
+                                Integrated MySQL for backend user management, bcrypt for password hashing, and mutual
+                                TLS for secure client-server
+                                verification.
+                                Includes features like registration/login, chat logging, certificate validation, and
+                                real-time encrypted messaging across clients.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>MySQL</span>
+                                <span>OpenSSL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Praveenm1910/Multi-Thread-Chat-Server" target="_blank"
+                                    rel="noopener">GitHub</a>
+                                <!-- <a href="https://project1-demo.com" target="_blank" rel="noopener">Live Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://www.nokia.com/sites/default/files/2022-01/cybersecurity4_0.jpg?height=600&width=1920&resize=1"
+                                alt="Security Scanner Tool" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Password Strength Checker Tool</h3>
+                            <p>Developed a C-based tool that evaluates and enhances password security. It assesses
+                                passwords for length, uppercase letters,
+                                lowercase letters, special symbols, and numeric sequences. The tool also sanitizes input
+                                to ensure only safe characters
+                                are used. Ideal for developing and testing strong password practices.
+                            </p>
+                            <div class="project-tech">
+                                <span>C</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Praveenm1910/passwordstrengthchecker.git" target="_blank"
+                                    rel="noopener">GitHub</a>
+                                <!-- <a href="https://project2-demo.com" target="_blank" rel="noopener">Live Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="data:image/png;base64,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"
+                                alt="Task Management App" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>PEC Hacks 2.0 Website</h3>
+                            <p>Contributed for the development of pec hacks 2.0, ticket generation and check in system
+                                for the
+                                hackathon.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://pechacks.org/" target="_blank" rel="noopener">Live Demo</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>ARP Spoof Detection Tool</h3>
-                        <p>Developed an prototype model to detect ARP Spoofing in a network and alert the User about the Network Spoof.</p>
-                        <div class="project-links">
-                            <!-- <a href="#" class="project-link">View Live</a> -->
-                            <a href="https://github.com/Praveenm1910/ARP-Spoof-Detector" class="project-link">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Password Strength Checker</h3>
-                        <p>The Password Strength Checker is a vital tool designed to evaluate and bolster the security of user-created passwords. By assessing passwords through a range of security criteria, this project empowers users to craft robust passwords that protect against unauthorized access and potential security threats.</p>
-                        <div class="project-links">
-                            <!-- <a href="#" class="project-link">View Live</a> -->
-                            <a href="https://github.com/Praveenm1910/passwordstrengthchecker" class="project-link">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Chat Server</h3>
-                        <p>The Multi-threaded Group Chat Server is a real-time chat application built in Python, enabling multiple users to communicate seamlessly in a single chat room. It leverages socket programming and threading to handle multiple connections efficiently.</p>
-                        <div class="project-links">
-                            <!-- <a href="#" class="project-link">View Live</a> -->
-                            <a href="https://github.com/Praveenm1910/Multi-Thread-Chat-Server" class="project-link">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more project cards as needed -->
             </div>
         </section>
 
-        <section id="certifications" class="certifications section">
-            <h2>Certifications</h2>
-            <div class="cert-container">
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
+        <!-- Certifications Section -->
+        <section id="certifications" class="section certifications-section">
+            <div class="certifications-bg"></div>
+            <div class="section-container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <h3>TCS - ion Information Security Practioners Perspective</h3>
+                        <p class="cert-issuer">TCS</p>
+                        <p class="cert-date">2023</p>
+                        <!-- <p class="cert-desc">Professional-level certification demonstrating expertise in designing -->
+                        <!-- distributed systems on AWS.</p> -->
                     </div>
-                    <h3>TCS - ion Information Security Practioners Perspective</h3>
-                    <p>TCS</p>
-                    <p class="cert-date">2023</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                            </svg>
+                        </div>
+                        <h3>Cyber Security Analyst</h3>
+                        <p class="cert-issuer">IBM</p>
+                        <p class="cert-date">2023</p>
+                        <!-- <p class="cert-desc">Professional certification in Google Cloud Platform architecture and
+                                                development.</p> -->
                     </div>
-                    <h3>GitHub Foundations</h3>
-                    <p>GitHub</p>
-                    <p class="cert-date">2024</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                            </svg>
+                        </div>
+                        <h3>GitHub Foundations</h3>
+                        <p class="cert-issuer">GitHub</p>
+                        <p class="cert-date">2024</p>
+                        <!-- <p class="cert-desc">Advanced certification in ethical hacking and penetration testing
+                            methodologies.</p> -->
                     </div>
-                    <h3>AWS Cloud Essentials</h3>
-                    <p>AWS</p>
-                    <p class="cert-date">2024</p>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                            </svg>
+                        </div>
+                        <h3>AWS Cloud Essentials</h3>
+                        <p class="cert-issuer">AWS</p>
+                        <p class="cert-date">2024</p>
+                        <!-- <p class="cert-desc">Professional certification in Google Cloud Platform architecture and
+                                                development.</p> -->
+                    </div>
                 </div>
-                <!-- Add more certification cards as needed -->
             </div>
         </section>
 
-        <section id="contact" class="contact section">
-            <h2>Get In Touch</h2>
-            <div class="contact-container">
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Name</label>
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="contact-bg"></div>
+            <div class="section-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always open to discussing new opportunities, interesting projects, or just having a chat
+                            about technology and cybersecurity.</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                    </svg>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Email</h4>
+                                    <p>praveenm191004@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                    </svg>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Phone</h4>
+                                    <p>+91 81481 08373</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                    </svg>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Location</h4>
+                                    <p>Chennai, India</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" required></textarea>
-                        <label for="message">Message</label>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-                <p id="response-message" style="display:none;"></p>
+                    <form class="contact-form" , id="contact-form"
+                        action="https://formsubmit.co/praveenm191004@gmail.com" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-content">
-            <div class="social-links">
-                <a href="https://github.com/Praveenm1910"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/praveenm1910/"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/_.praveen._1910/"><i class="fab fa-instagram"></i></a>
+            <div class="footer-info">
+                <h3>Praveen M</h3>
+                <p>Developer | Cyber Security Analyst | Programmer</p>
             </div>
+            <div class="footer-social">
+                <a href="https://github.com/Praveenm1910" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/praveenm1910" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/_.praveen._1910" target="_blank" rel="noopener"
+                    aria-label="Instagram">
+                    <svg viewBox="0 0 448 512" fill="currentColor">
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.8 224.1 370.8S339 319.5 339 255.9 
+                                        287.7 141 224.1 141zm0 186.6c-39.6 0-71.7-32.1-71.7-71.7s32.1-71.7 71.7-71.7 
+                                        71.7 32.1 71.7 71.7-32.1 71.7-71.7 71.7zm146.4-194.3c0 14.9-12 26.9-26.9 
+                                        26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zM398.8 388c-7.8 
+                                        19.5-22.9 34.6-42.4 42.4-29.4 11.7-99.2 9-132.4 9s-103 2.6-132.4-9c-19.5-7.8-34.6-22.9-42.4-42.4-11.7-29.4-9-99.2-9-132.4s-2.6-103 
+                                        9-132.4c7.8-19.5 22.9-34.6 42.4-42.4 29.4-11.7 99.2-9 
+                                        132.4-9s103-2.6 132.4 9c19.5 7.8 34.6 22.9 42.4 42.4 
+                                        11.7 29.4 9 99.2 9 132.4s2.7 103-9 132.4z" />
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2025 Praveen M. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
