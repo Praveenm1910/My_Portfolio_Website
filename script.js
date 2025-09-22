@@ -83,8 +83,9 @@ function initializeMouseHighlighter() {
 }
 
 // Navigation functionality
+
 function initializeNavigation() {
-    // Smooth scrolling for navigation links
+    // Smooth scrolling
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -92,24 +93,19 @@ function initializeNavigation() {
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-
-                // Update active state
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 currentSection = targetId;
                 updateActiveNavigation();
             }
         });
     });
 
-    // Scroll spy functionality
+    // Scroll spy
     window.addEventListener('scroll', debounce(updateActiveSection, 100));
 }
 
 function updateActiveSection() {
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
+    const scrollPosition = window.scrollY + window.innerHeight / 3;
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -120,8 +116,6 @@ function updateActiveSection() {
             if (currentSection !== sectionId) {
                 currentSection = sectionId;
                 updateActiveNavigation();
-
-                // Trigger section animations
                 triggerSectionAnimations(section);
             }
         }
@@ -136,6 +130,21 @@ function updateActiveNavigation() {
         }
     });
 }
+
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+// Example animation trigger placeholder
+function triggerSectionAnimations(section) {
+    // Add your animations here
+}
+
+initializeNavigation();
 
 // Typewriter effect
 function initializeTypewriter() {
