@@ -212,34 +212,7 @@ body {
     background-clip: text;
 }
 
-/* @media (max-width: 768px) {
-    .vertical-nav {
-        flex-direction: row;
-        height: auto;
-        width: 100%;
-        padding: 1rem;
-        position: relative;
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
-    .nav-menu {
-        flex-direction: row;
-        gap: 0.5rem;
-        margin-bottom: 0;
-    }
-
-    .nav-link {
-        writing-mode: horizontal-tb;
-        text-orientation: initial;
-        transform: none !important;
-    }
-
-    .nav-social {
-        flex-direction: row;
-        margin-left: auto;
-    }
-} */
 
 /* Home Section */
 .home-section {
@@ -545,18 +518,24 @@ body {
     border-radius: 50px;
     overflow: hidden;
     background: var(--gradient-primary);
-    padding: 4px;
+    padding: 6px;
+    /* slightly larger padding for glow */
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    /* keeps it perfectly square */
     margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .image-frame img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
     border-radius: 46px;
     display: block;
+    transition: transform 0.5s ease;
 }
 
 .image-frame::before {
@@ -566,12 +545,27 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(transparent, var(--primary-color), transparent 30%);
+    background: conic-gradient(rgba(255, 255, 255, 0.1),
+            var(--primary-color),
+            rgba(255, 255, 255, 0.1) 30%);
     animation: rotate 10s linear infinite;
     z-index: -1;
     border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0.8;
 }
 
+/* Hover effects */
+.image-frame:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.image-frame:hover img {
+    transform: scale(1.03);
+}
+
+/* Rotation keyframes */
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
