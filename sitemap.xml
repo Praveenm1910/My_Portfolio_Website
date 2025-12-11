@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://praveenm.xyz/</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://praveenm.dev/</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://praveenm.dev/assets/Praveen.jpg</image:loc>
+      <image:title>Praveen M - Profile Picture</image:title>
+      <image:caption>Full Stack Developer &amp; Cybersecurity Analyst</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://praveenm.dev/assets/PraveenM_resume.pdf</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
