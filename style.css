@@ -212,12 +212,12 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .mobile-link {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--text-gray);
     text-decoration: none;
     transition: var(--transition);
@@ -230,6 +230,7 @@ body {
     color: var(--primary-color);
     transform: scale(1.1);
     background: -webkit-linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

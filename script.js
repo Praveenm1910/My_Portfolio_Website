@@ -95,7 +95,15 @@ function initializeNavigation() {
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Calculate precise offset to verify standard/mobile nav height
+                const navHeight = document.querySelector('.main-nav').offsetHeight;
+                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - navHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+
                 currentSection = targetId;
                 updateActiveNavigation();
             }
