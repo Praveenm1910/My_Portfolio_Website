@@ -12,8 +12,9 @@ let charIndex = 0;
 let isDeleting = false;
 
 // DOM Elements
+// DOM Elements
 const mouseHighlighter = document.querySelector('.mouse-highlighter');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
 const sections = document.querySelectorAll('.section');
 const typewriterRoles = document.querySelector('.typewriter-roles');
 
@@ -21,6 +22,7 @@ const typewriterRoles = document.querySelector('.typewriter-roles');
 document.addEventListener('DOMContentLoaded', function () {
     initializeMouseHighlighter();
     initializeNavigation();
+    initializeMobileMenu(); // New init call
     initializeTypewriter();
     initializeScrollAnimations();
     initializeContactForm();
@@ -145,6 +147,32 @@ function triggerSectionAnimations(section) {
 }
 
 initializeNavigation();
+
+function initializeMobileMenu() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    // Note: mobile-links are already part of navLinks for scroll spy, 
+    // but we need them specific here for close-on-click
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (!menuBtn || !mobileMenu) return;
+
+    // Toggle Menu
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when a link is clicked
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
 
 // Typewriter effect
 function initializeTypewriter() {
